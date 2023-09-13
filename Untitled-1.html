@@ -5,20 +5,23 @@
     <div>set cookies</div>
   </body>
   <script>
-    (function () {
-      const urlParams = new URLSearchParams(window.location.search);
-      if (urlParams.get("smiclickId")) {
-        var maxAgeInSeconds = 24 * 60 * 60; // 24 hours in seconds
-        var expires = new Date();
-        expires.setTime(expires.getTime() + maxAgeInSeconds * 1000); // 24 hours in milliseconds
-        const myParam = urlParams.get("smiclickId");
-        const existingCookies = document.cookie;
-        const newCookie = `smiclickId=${myParam}; max-age=${maxAgeInSeconds}; expires=${expires.toUTCString()}; domain=.ramy.com; path=/; SameSite=Strict`;
-        document.cookie = existingCookies
-          ? existingCookies + "; " + newCookie
-          : newCookie;
-        var queryFromLocalStorage = myParam;
-      }
-    })();
+(function () {
+  const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.get("smiclickId")) {
+    var maxAgeInSeconds = 24 * 60 * 60;
+    var expires = new Date();
+    expires.setTime(expires.getTime() + maxAgeInSeconds * 1000);
+    const myParam = urlParams.get("smiclickId");
+    const existingCookies = document.cookie;
+    const newCookie = `smiclickId=${myParam}; max-age=${maxAgeInSeconds}; expires=${expires.toUTCString()}; domain=.coo-7mue.onrender.com; path=/; SameSite=Strict`;
+    document.cookie = existingCookies
+      ? existingCookies + "; " + newCookie
+      : newCookie;
+    var queryFromLocalStorage = myParam;
+  }
+})();
+
   </script>
 </html>
+
+

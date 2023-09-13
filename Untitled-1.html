@@ -13,7 +13,7 @@
     expires.setTime(expires.getTime() + maxAgeInSeconds * 1000);
     const myParam = urlParams.get("smiclickId");
     const existingCookies = document.cookie;
-    const newCookie = `smiclickId=${myParam}; max-age=${maxAgeInSeconds}; expires=${expires.toUTCString()}; domain=.coo-7mue.onrender.com; path=/; SameSite=Strict`;
+    const newCookie = `smiclickId=${myParam}; max-age=${maxAgeInSeconds}; expires=${expires.toUTCString()}; domain=.onrender.com; path=/; SameSite=Strict`;
     document.cookie = existingCookies
       ? existingCookies + "; " + newCookie
       : newCookie;
